@@ -1,12 +1,13 @@
 import styles from './Comment.module.css'
-import { Trash ,ThumbsUp} from 'phosphor-react'
+import { Trash, ThumbsUp } from 'phosphor-react'
+import { Avatar } from './Avatar';
 
 export function Comment() {
-    return(
-        <div className={styles.comment}>
-      <img  
+  return (
+    <div className={styles.comment}>
+      <Avatar
+        hasBorder={false}
         src="https://github.com/cicerogb.png"
-        alt=""
       />
 
       <div className={styles.commentBox}>
@@ -17,8 +18,8 @@ export function Comment() {
               <time title="May 11 at 08:13h" dateTime="2022-05-11 08:13:00">About 1 hour ago.</time>
             </div>
 
-            <button  title="Delete comment">
-            <Trash size={24} />
+            <button title="Delete comment">
+              <Trash size={24} />
             </button>
           </header>
 
@@ -27,11 +28,11 @@ export function Comment() {
 
         <footer>
           <button >
-          <ThumbsUp />
+            <ThumbsUp />
             Clap <span>20</span>
           </button>
         </footer>
       </div>
     </div>
-    )
+  )
 }
