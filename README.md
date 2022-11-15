@@ -1,11 +1,9 @@
-
-<div align="center">
-  <img src="public/ignite-logo.svg" >
-  <h2>Feed</h2>
+<div align="center">  
+  <h1><img src="public/ignite-logo.svg" >Ignite Feed</h1>
 </div>
+<img width="1200" alt="" src="public/gif-ignite-feed.gif">
 
-
-Developed on Ignite classes by [Rocketseat](https://rocketseat.com.br/)
+Developed on the Ignite classes by [Rocketseat](https://rocketseat.com.br/)
 
 ## Getting Started
 
