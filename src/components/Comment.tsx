@@ -1,9 +1,14 @@
-import styles from './Comment.module.css'
-import { Trash, ThumbsUp } from 'phosphor-react'
-import { Avatar } from './Avatar';
-import { useState } from 'react';
+import styles from "./Comment.module.css";
+import { Trash, ThumbsUp } from "phosphor-react";
+import { Avatar } from "./Avatar";
+import { useState } from "react";
 
-export function Comment({ content, onDeleteComment }) {
+interface CommentProps {
+  content: string;
+  onDeleteComment: (comment: string) => void;
+}
+
+export function Comment({ content, onDeleteComment }: CommentProps) {
   const [likeCount, setLikeCount] = useState(0);
 
   function handleLikeComment() {
@@ -16,17 +21,16 @@ export function Comment({ content, onDeleteComment }) {
 
   return (
     <div className={styles.comment}>
-      <Avatar
-        hasBorder={false}
-        src="https://github.com/cicerogb.png"
-      />
+      <Avatar hasBorder={false} src="https://github.com/cicerogb.png" alt="" />
 
       <div className={styles.commentBox}>
         <div className={styles.commentContent}>
           <header>
             <div className={styles.authorAndTime}>
               <strong>Cicero Brunelli</strong>
-              <time title="May 11 at 08:13h" dateTime="2022-05-11 08:13:00">About 1 hour ago.</time>
+              <time title="May 11 at 08:13h" dateTime="2022-05-11 08:13:00">
+                About 1 hour ago.
+              </time>
             </div>
 
             <button onClick={handleDeleteComment} title="Delete comment">
@@ -45,5 +49,5 @@ export function Comment({ content, onDeleteComment }) {
         </footer>
       </div>
     </div>
-  )
+  );
 }
