@@ -1,4 +1,6 @@
+
 <div align="center">
+  <img src="public/ignite-logo.svg" >
   <h2>Feed</h2>
 </div>
 
